@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ramadan Kareem - Share Link</title>
+  <title>Ramadan Kareem · Neon Bereket</title>
   <style>
     /* Sıfırlama ve temel stil */
     * {
@@ -27,6 +27,17 @@
         repeating-linear-gradient(45deg, rgba(255, 255, 255, 0.01) 0px, rgba(255, 255, 255, 0.01) 2px, transparent 2px, transparent 8px);
       position: relative;
       overflow-x: hidden;
+      
+      /* ÖZEL İMLEÇ - Hilal ve yıldız teması */
+      cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><circle cx="16" cy="16" r="14" fill="%23ffd966" opacity="0.9" stroke="%23ffaa00" stroke-width="1.5"/><path d="M22 10c-3 0-5.5 2.5-5.5 5.5s2.5 5.5 5.5 5.5c0.8 0 1.6-0.2 2.3-0.5-1.3 1-2.9 1.6-4.7 1.6-3.9 0-7-3.1-7-7 0-3.6 2.8-6.6 6.3-7-0.4 0.7-0.7 1.5-0.7 2.4 0 2.6 2.1 4.7 4.7 4.7 1.3 0 2.5-0.5 3.3-1.4 0.2 0.9 0.4 1.7 0.4 2.6 0 4.4-3.6 8-8 8s-8-3.6-8-8 3.6-8 8-8c0.4 0 0.9 0 1.3 0.1z" fill="%23f0b300" /></svg>') 16 16, 
+      url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="%23ffd966" stroke="%23ffaa00" stroke-width="1.5"/><path d="M17 7c-2 0-3.5 1.5-3.5 3.5s1.5 3.5 3.5 3.5c0.5 0 1-0.1 1.5-0.3-0.8 0.6-1.8 1-2.9 1-2.5 0-4.5-2-4.5-4.5 0-2.3 1.8-4.2 4-4.5-0.3 0.5-0.4 1-0.4 1.5 0 1.7 1.3 3 3 3 0.8 0 1.6-0.3 2.1-0.9 0.1 0.5 0.2 1.1 0.2 1.6 0 2.8-2.2 5-5 5s-5-2.2-5-5 2.2-5 5-5c0.3 0 0.5 0 0.8 0.1z" fill="%23f0b300"/></svg>') 12 12,
+      auto;
+      
+      /* Metin seçimini engelle - tüm sayfada */
+      user-select: none;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
     }
 
     /* büyüyen hilal ve yıldız tozu efekti (arkaplan katmanı) */
@@ -37,7 +48,7 @@
       background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" opacity="0.2"><path fill="%23ffd966" d="M120 40c-30 0-55 25-55 55s25 55 55 55c8 0 15.7-1.8 22.5-5-13 10-29.5 16-47.5 16-39 0-70-31-70-70 0-36.5 28-66.5 63-70-4.5 7-7 15.5-7 24 0 26 21 47 47 47 13 0 24.8-5.3 33.3-14 2 8.5 3.7 17 3.7 26 0 44-36 80-80 80s-80-36-80-80 36-80 80-80c4.4 0 8.7 0.4 13 1.1z"/></svg>') repeat;
       background-size: 140px 140px;
       mix-blend-mode: overlay;
-      pointer-events: none;
+      pointer-events: none; /* İmleç bu katmanı etkilemesin */
     }
 
     /* ince fener / ışık huzmeleri */
@@ -64,6 +75,15 @@
       align-items: center;
       justify-content: center;
       min-height: 90vh; /* orta-yukarıda durması için esnek */
+      
+      /* İmleç container içinde de aynı kalsın */
+      cursor: inherit;
+      
+      /* Metin seçimini engelle - container içinde de */
+      user-select: none;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
     }
 
     /* ana başlık: RAMADAN KAREEM */
@@ -105,6 +125,8 @@
       line-height: 1.6;
       transition: 0.3s;
       word-break: break-word;
+      
+      /* Metin seçimi engellendi - üstteki body'den geliyor */
     }
 
     /* hafif altın vurgulu çerçeve */
@@ -154,6 +176,12 @@
       color: #ffd966;
       filter: drop-shadow(0 0 8px #fd0);
       animation: twinkling 3s infinite alternate;
+      
+      /* Bu elementlerin de seçilememesi için */
+      user-select: none;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
     }
 
     @keyframes twinkling {
@@ -196,6 +224,19 @@
       text-shadow: 0 0 4px #231c00;
       position: relative;
       z-index: 5;
+      
+      /* Seçilemez */
+      user-select: none;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+    }
+    
+    /* Linkler veya tıklanabilir öğeler için imleç değişimi (opsiyonel) */
+    a, button, [role="button"] {
+      cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><circle cx="16" cy="16" r="14" fill="%23ffaa00" opacity="0.9" stroke="%23ffd966" stroke-width="1.5"/><path d="M22 10c-3 0-5.5 2.5-5.5 5.5s2.5 5.5 5.5 5.5c0.8 0 1.6-0.2 2.3-0.5-1.3 1-2.9 1.6-4.7 1.6-3.9 0-7-3.1-7-7 0-3.6 2.8-6.6 6.3-7-0.4 0.7-0.7 1.5-0.7 2.4 0 2.6 2.1 4.7 4.7 4.7 1.3 0 2.5-0.5 3.3-1.4 0.2 0.9 0.4 1.7 0.4 2.6 0 4.4-3.6 8-8 8s-8-3.6-8-8 3.6-8 8-8c0.4 0 0.9 0 1.3 0.1z" fill="%23ffffff"/></svg>') 16 16, 
+      url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="%23ffaa00" stroke="%23ffd966" stroke-width="1.5"/><path d="M17 7c-2 0-3.5 1.5-3.5 3.5s1.5 3.5 3.5 3.5c0.5 0 1-0.1 1.5-0.3-0.8 0.6-1.8 1-2.9 1-2.5 0-4.5-2-4.5-4.5 0-2.3 1.8-4.2 4-4.5-0.3 0.5-0.4 1-0.4 1.5 0 1.7 1.3 3 3 3 0.8 0 1.6-0.3 2.1-0.9 0.1 0.5 0.2 1.1 0.2 1.6 0 2.8-2.2 5-5 5s-5-2.2-5-5 2.2-5 5-5c0.3 0 0.5 0 0.8 0.1z" fill="%23ffffff"/></svg>') 12 12,
+      pointer;
     }
   </style>
 </head>
@@ -222,7 +263,7 @@
     </div>
 
     <!-- hafif bir çizgi / ayraç (dekor) -->
-    <div style="width: 120px; height: 2px; background: linear-gradient(90deg, transparent, #f5b042, #ffe68f, #f5b042, transparent); margin: 1rem 0;"></div>
+    <div style="width: 120px; height: 2px; background: linear-gradient(90deg, transparent, #f5b042, #ffe68f, #f5b042, transparent); margin: 1rem 0; user-select: none;"></div>
     
     <!-- küçük not / tarihsiz (isteğe bağlı) -->
     <footer>
@@ -235,6 +276,26 @@
     (function() {
       // Gönül rahatlığıyla: arkaplandaki yıldız hissini canlandıran ufak bir efekt yok, sadece kutlama.
       console.log("🌙 RAMADAN KAREEM — Işıklı geceler, bereketli iftarlar ✨");
+      
+      // Ekstra koruma: Tüm sayfada kopyalama engelleme (context menu + kısayollar)
+      document.addEventListener('contextmenu', function(e) {
+        e.preventDefault(); // Sağ tık menüsünü engelle
+        return false;
+      });
+      
+      document.addEventListener('keydown', function(e) {
+        // Ctrl+C, Ctrl+X, Ctrl+S, Ctrl+A engelle (isteğe bağlı)
+        if (e.ctrlKey && (e.key === 'c' || e.key === 'x' || e.key === 's' || e.key === 'a')) {
+          e.preventDefault();
+          return false;
+        }
+        
+        // F12 veya geliştirici araçları kısayollarını engelle (basit önlem)
+        if (e.key === 'F12' || (e.ctrlKey && e.shiftKey && e.key === 'I') || (e.ctrlKey && e.shiftKey && e.key === 'J')) {
+          e.preventDefault();
+          return false;
+        }
+      });
     })();
   </script>
 </body>
