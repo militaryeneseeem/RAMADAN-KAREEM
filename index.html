@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ramadan Kareem - Share Link</title>
+  <style>
+    /* Sıfırlama ve temel stil */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      min-height: 100vh;
+      font-family: 'Segoe UI', 'Arial', system-ui, sans-serif;
+      background: #0b0c1a; /* derin gece göğü */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      /* büyük, mistik ramadan arka planı – ışıltılı dokular */
+      background-image: 
+        radial-gradient(circle at 10% 20%, rgba(255, 215, 0, 0.05) 0%, transparent 30%),
+        radial-gradient(circle at 90% 70%, rgba(200, 160, 255, 0.08) 0%, transparent 35%),
+        radial-gradient(circle at 30% 80%, rgba(255, 160, 0, 0.06) 0%, transparent 40%),
+        repeating-linear-gradient(45deg, rgba(255, 255, 255, 0.01) 0px, rgba(255, 255, 255, 0.01) 2px, transparent 2px, transparent 8px);
+      position: relative;
+      overflow-x: hidden;
+    }
+
+    /* büyüyen hilal ve yıldız tozu efekti (arkaplan katmanı) */
+    body::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" opacity="0.2"><path fill="%23ffd966" d="M120 40c-30 0-55 25-55 55s25 55 55 55c8 0 15.7-1.8 22.5-5-13 10-29.5 16-47.5 16-39 0-70-31-70-70 0-36.5 28-66.5 63-70-4.5 7-7 15.5-7 24 0 26 21 47 47 47 13 0 24.8-5.3 33.3-14 2 8.5 3.7 17 3.7 26 0 44-36 80-80 80s-80-36-80-80 36-80 80-80c4.4 0 8.7 0.4 13 1.1z"/></svg>') repeat;
+      background-size: 140px 140px;
+      mix-blend-mode: overlay;
+      pointer-events: none;
+    }
+
+    /* ince fener / ışık huzmeleri */
+    body::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(ellipse at 50% 0%, rgba(255, 235, 150, 0.1) 0%, transparent 60%);
+      top: 0;
+      left: 0;
+      pointer-events: none;
+    }
+
+    .container {
+      position: relative;
+      z-index: 5;
+      max-width: 950px;
+      width: 90%;
+      margin: 2rem auto;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 90vh; /* orta-yukarıda durması için esnek */
+    }
+
+    /* ana başlık: RAMADAN KAREEM */
+    .neon-title {
+      font-size: clamp(3rem, 15vw, 5.5rem);
+      font-weight: 800;
+      letter-spacing: 6px;
+      text-transform: uppercase;
+      color: #fff4d6;
+      text-shadow: 
+        0 0 5px #f0c000,
+        0 0 15px #f0a500,
+        0 0 30px #f0a500,
+        0 0 60px #ff7b00,
+        0 0 90px #ff3c00;
+      animation: neonPulse 2.2s ease-in-out infinite alternate;
+      margin-top: 5vh;              /* orta-yukarı için */
+      margin-bottom: 1.2rem;
+      line-height: 1.2;
+      backdrop-filter: blur(1px);
+      transform-origin: center;
+      font-family: 'Trebuchet MS', 'Segoe UI', 'Arial Black', sans-serif;
+    }
+
+    /* alt metin – inci parlaklığında */
+    .blessing-message {
+      font-size: clamp(1.1rem, 4vw, 1.9rem);
+      font-weight: 400;
+      color: rgba(255, 255, 245, 0.95);
+      background: rgba(10, 5, 20, 0.3);
+      backdrop-filter: blur(8px);
+      padding: 1.2rem 2rem;
+      border-radius: 80px 20px 80px 20px;
+      border: 1px solid rgba(255, 215, 0, 0.4);
+      box-shadow: 0 15px 25px -10px rgba(0,0,0,0.6), 0 0 20px rgba(255, 200, 0, 0.3);
+      max-width: 780px;
+      margin: 2rem auto 4rem auto;
+      text-shadow: 0 2px 5px rgba(0,0,0,0.5);
+      line-height: 1.6;
+      transition: 0.3s;
+      word-break: break-word;
+    }
+
+    /* hafif altın vurgulu çerçeve */
+    .blessing-message:hover {
+      border-color: #f8c150;
+      box-shadow: 0 20px 30px -8px black, 0 0 30px #ffbb33;
+    }
+
+    /* nazik dalgalanma efekti */
+    @keyframes neonPulse {
+      0% {
+        text-shadow:
+          0 0 4px #ffe066,
+          0 0 12px #ffbb00,
+          0 0 25px #ff9100,
+          0 0 45px #ff5e00,
+          0 0 70px #ff2200;
+        transform: scale(1);
+      }
+      50% {
+        text-shadow:
+          0 0 8px #fff3b0,
+          0 0 20px #ffcc33,
+          0 0 40px #ffaa00,
+          0 0 70px #ff6a00,
+          0 0 100px #ff2200;
+      }
+      100% {
+        text-shadow:
+          0 0 12px #ffffbb,
+          0 0 30px #ffdd55,
+          0 0 55px #ffaa33,
+          0 0 90px #ff7733,
+          0 0 130px #ff4422;
+        transform: scale(1.02);
+      }
+    }
+
+    /* dekoratif hilal ve yıldız (isteğe bağlı animasyon) */
+    .moon-stars {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      font-size: 2.5rem;
+      margin-bottom: 0.8rem;
+      opacity: 0.7;
+      color: #ffd966;
+      filter: drop-shadow(0 0 8px #fd0);
+      animation: twinkling 3s infinite alternate;
+    }
+
+    @keyframes twinkling {
+      0% { opacity: 0.5; filter: drop-shadow(0 0 4px #ffbb00); }
+      100% { opacity: 1; filter: drop-shadow(0 0 14px #ffea80); }
+    }
+
+    /* mobil uyum için ince ayar */
+    @media (max-width: 600px) {
+      .neon-title {
+        letter-spacing: 2px;
+      }
+      .blessing-message {
+        padding: 1rem 1.2rem;
+        border-radius: 40px 10px 40px 10px;
+      }
+      .moon-stars {
+        font-size: 2rem;
+        gap: 1rem;
+      }
+    }
+
+    /* sadece arkaplana derinlik katan ekstra katman (fener gölgesi) */
+    .extra-glow {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 40%;
+      background: radial-gradient(ellipse at 30% 100%, rgba(255, 190, 50, 0.15), transparent 60%);
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    /* hoş geldin mesajı minimal */
+    footer {
+      margin-top: 2rem;
+      color: rgba(230, 210, 150, 0.6);
+      font-size: 0.9rem;
+      text-shadow: 0 0 4px #231c00;
+      position: relative;
+      z-index: 5;
+    }
+  </style>
+</head>
+<body>
+  <!-- ekstra ışık katmanları (arkaplan) -->
+  <div class="extra-glow"></div>
+
+  <div class="container">
+    <!-- minik süs hilali -->
+    <div class="moon-stars" aria-hidden="true">
+      <span>🌙</span>
+      <span>✨</span>
+      <span>⭐</span>
+      <span>🌙</span>
+    </div>
+
+    <!-- ANA BAŞLIK: neon animasyonlu RAMADAN KAREEM -->
+    <h1 class="neon-title">RAMADAN KAREEM</h1>
+
+    <!-- alt metin: kişisel mesaj ve iyi dilekler -->
+    <div class="blessing-message">
+      ✦ The person who sent this to you is wishing you a blessed Ramadan. <br>
+      We wish you healthy and happy fasting, and enjoyable iftars. ✦
+    </div>
+
+    <!-- hafif bir çizgi / ayraç (dekor) -->
+    <div style="width: 120px; height: 2px; background: linear-gradient(90deg, transparent, #f5b042, #ffe68f, #f5b042, transparent); margin: 1rem 0;"></div>
+    
+    <!-- küçük not / tarihsiz (isteğe bağlı) -->
+    <footer>
+      <span>✦ رمضان كريم ✦</span>
+    </footer>
+  </div>
+
+  <!-- küçük bir script (sadece ekstra kıpırtı için konsola selam) -->
+  <script>
+    (function() {
+      // Gönül rahatlığıyla: arkaplandaki yıldız hissini canlandıran ufak bir efekt yok, sadece kutlama.
+      console.log("🌙 RAMADAN KAREEM — Işıklı geceler, bereketli iftarlar ✨");
+    })();
+  </script>
+</body>
+</html>
